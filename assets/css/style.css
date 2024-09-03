@@ -103,6 +103,8 @@ margin-bottom: 10px;
     padding: 10px;
     margin-bottom: 10px;
     width: 95.5%;
+    border:none;
+    outline: none;
 }
 .vendor-lister .vendor-icon img{
  max-width: 100%;
@@ -158,4 +160,29 @@ padding: 0 10px;
 position: absolute;
 bottom:33%;
 right:10px;
+}
+
+#cart-table{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#cart-table tr{
+  padding:20px;
+  border-bottom: 1px solid lightgreen;
+}
+#cart-table tr:nth-child(2n){
+    background: lightgreen;
+
+  }
+#cart-table tr td{
+  padding: 5px;
+}
+#cart-table tr td input{
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+#table-footer{
+    padding: 20px;
 }
