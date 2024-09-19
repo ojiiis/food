@@ -14,14 +14,17 @@ for(i of vmi){
  
 const cqi = document.getElementsByClassName('cart-qty');
 for(let i of cqi){
-    i.parentElement.parentElement.children[2].innerText = Intl.NumberFormat().format(i.id * i.value)
+    i.parentElement.parentElement.children[2].innerText = "₦"+Intl.NumberFormat().format(i.id * i.value)
     i.onchange = function(){
-        i.parentElement.parentElement.children[2].innerText = Intl.NumberFormat().format(i.id * i.value)
-        document.getElementById('subtotal').innerText = new Intl.NumberFormat().format(sumCart());
+        i.parentElement.parentElement.children[2].innerText = "₦"+ new Intl.NumberFormat().format(i.id * i.value)
+       cartTotals();
     }
-    document.getElementById('subtotal').innerText = new Intl.NumberFormat().format(sumCart());
+   cartTotals();
 }
-
+function cartTotals(){
+     document.getElementById('subtotal').innerText = "₦"+ new Intl.NumberFormat().format(sumCart());
+        document.getElementById('grandtotal').innerText = "₦"+ new Intl.NumberFormat().format(sumCart());
+}
 function sumCart(){
     const cqi = document.getElementsByClassName('cart-qty');
    let total = 0
